@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* 도깨비 PJ : 메인페이지 CSS - main.css */
+
+/* 리셋, 공통 외부 CSS 합치기 */
+@import url(./reset.css);
+@import url(./core.css);
+@import url(./common.css);
+
+/* 공사중 표시 */
+body * {
+    /* outline: 2px dashed #ccc; */
+}
+body > div > * {
+    /* outline-color: red; */
+}
+/* 1. 좌측 베너 */
+.leftBanner{
+    position: fixed;
+    left: 1%;
+    top: 10px;
+    z-index: 2;
+    background-color: #fff;
+}
+/************ 4. 메인영역: .group-part ************/
+

@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/* 웹폰트 CDN */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Gugi&family=Nanum+Gothic&family=Single+Day&family=ZCOOL+KuaiLe&display=swap');
+
+/* 전체 글자크기 적용 */
+html{
+    font-size: 10px;
+    /* rem 단위를 위한 계산편의성 셋팅 + 전체 글자크기 제어 */
+}
+.wrap{
+    padding-left: 190px;
+}
+/* 전체 글자체 적용 */
+body{
+    font-family: "Noto Sans KR", Malgun Gothic, dotum, "돋움", Arial, AppleGothic, Sans-serif;
+}
+
+/* 공통 레이아웃 클래스 */
+/* 속박스 */
+
+/* 파티션박스 */
+.partbox {
+    /* 옆으로 흐르게 */
+    float: left; 
+    /* 크기를 줬을 땐 안망가지지만 자연스럽게 늘어날 때 망가짐 */
+    /* 보더/패딩 포함박스 */
+    box-sizing: border-box;
+    /* padding: 15px;  - 제외 */
+    /* 임시 보이게 보더 */
+    border: 2px dashed #ddd;
+    /* 높이값이 속박스에 있을 경우 
+    채우기 셋팅 - 높이값이 파티션박스에 있으면 안씀*/
+    height: 300px;
+    
+}
+/* 12 그리드 클래스: 한 줄에 합이 12컬럼이 되도록 셋팅! */
+.col-1 {
+    width: 8.33%;
+}
+.col-2 {
+    width: 16.66%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-4 {
+    width: 33.33%;
+}
+.col-5 {
+    width: 41.66%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-7 {
+    width: 58.33%;
+}
+.col-8 {
+    width: 66.66%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-10 {
+    width: 83.33%;
+}
+.col-11 {
+    width: 91.66%;
+}
+.col-12 {
+    width: 100%;
+}
+/* 숨길 박스 */
+.col-none{
+    display: none;
+}
+/* 보일 박스 */
+.col-block{
+    display: block;
+}
+        
