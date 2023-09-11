@@ -75,9 +75,9 @@
 #container>section {
     /*슬라이드부모*/
     position: relative;
-    width: 913px;
-    height: 564px;
-    float: left;
+    width: 100%;
+    aspect-ratio: 2/1;
+    /* height: 564px; */
     overflow: hidden;
     /*넘치는 자식요소 숨기기*/
     /*    border: 2px solid red;*/
