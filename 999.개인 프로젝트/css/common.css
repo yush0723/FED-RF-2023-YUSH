@@ -21,10 +21,6 @@
     padding: 0 10px 10px;
     width: 140px;
 }
-
-/* 탑메뉴 2번째 클릭시 이동이벤트 */
-
-
 /* 1-2-2 GNB메뉴 */
 .gnb ul{
     /* 플렉스박스 */
@@ -63,6 +59,7 @@
     position: relative;
     width: 100%;
     max-width: 1000px;
+    
     margin: 0px auto;
     padding-top: 57px;
 }
@@ -88,7 +85,7 @@
 #slide {
     display: flex;
     /* 플렉스박스!!! */
-
+    
     /*사진을 싸고 있는 슬라이드*/
     position: absolute;
     top: 0;
@@ -104,6 +101,7 @@
     /* 가로크기를 부모박스 크기에 맞춤! */
     /* height 값은 flex박스 자식요소에서
     등분할시 자동 100%임! */
+    
 }
 
 #slide li img {
@@ -112,6 +110,7 @@
     height: 100%;
     object-fit: cover;
     /* 이미지 비율유지 채우기! */
+    
 }
 
 /*이동버튼*/
@@ -121,7 +120,9 @@
     transform: translateY(-50%);
     /*Y축 중앙이동*/
 }
-
+.abtn img{
+    width: 10px;
+}
 /*왼쪽버튼*/
 .ab1 {
     left: 50px;
@@ -149,6 +150,7 @@
 
 .indic li img {
     position: absolute;
+    width: 10px;
     /*이미지 겹치게*/
 }
 
@@ -171,4 +173,32 @@
     float: left;
 }
 
+.cbox{
+    margin-top: 30px;
+}
+.best{
+    text-align: center;
+}
+
+.cbox>ul>li>h1{
+    font-size: 1.3rem;
+}
+/* GNB메뉴 a */
+.best ul>li>a{
+    float: left;
+    text-align: center;
+    font-size: 0.6rem;
+    display: block;
+    
+    padding: 0px 10px 10px;
+    /* 줄바꿈 방지 */
+    white-space: nowrap;
+}
+/* GNB 상위 li 오버시 a*/
+.best ul>li:hover>a{
+    color: rgb(155, 149, 149);
+}
+.partbox{
+    
+}
 /************ 3. 하단영역 ************/
