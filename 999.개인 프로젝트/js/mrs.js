@@ -92,14 +92,6 @@ function loadFn() {
         clickSts=1;//잠금!
         setTimeout(()=>clickSts=0,TIME_SLIDE);//해제!       
 
-
-        // 호출확인
-        console.log('나야나!',this,
-        this.classList.contains('ab2'));
-
-        // classList.contains(클래스명)
-        // 선택요소에 해당클래스가 있으면 true
-
         // 1. 오른쪽 버튼 여부 알아내기
         let isRight = this.classList.contains('ab2');
 
@@ -188,7 +180,7 @@ function loadFn() {
             slide.style.transition = 'none';
         }, TIME_SLIDE);
     } //////////// rightSlide 함수 ////////////
-
+    
 
     /********************************** 
         자동넘기기 기능구현
@@ -239,16 +231,30 @@ function loadFn() {
         // 3. 일정시간후 다시 인터발호출셋팅하기!!!
         autoT = setTimeout(slideAuto,5000);
         // 결과적으로 5초후 인터발재실행은 하나만 남는다!
-
    } //////////// clearAuto 함수 ///////////
 
-
-
-
-
-
-
-
-
+   // 1. 변경대상: .partbox
+   var part_box = document.querySelector('.part-box');
+   
+   // 2. 입력코드 만들어 넣기
+   var hcode = '';
+   
+   hcode += '<ul>'
+   
+   for(var i=0;i<6;i++){
+       hcode += `
+           <li>
+               <img src="./images/1-${i+1}.PNG" alt="slide">
+               <div class="item-info">
+                   <h3>상품명${i+1}</h3>
+                   <h4>${i+1}</h4>
+               </div>
+           </li>
+       `;
+   }
+   hcode += '</ul>';
+   
+   part_box.innerHTML = hcode;
 } //////////////// loadFn 함수 ///////////////
 /////////////////////////////////////////////
+

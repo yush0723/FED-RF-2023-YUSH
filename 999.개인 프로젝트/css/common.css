@@ -1,28 +1,24 @@
 @charset "utf-8";
 
 /* mrs PJ : 공통 모듈 CSS - common.css */
-/* 공유기능 요소 셋팅 */
-
-
 /************ 1. 상단영역 ************/
-
 /* 1-1. 로고박스 */
-.header__logo img{
+.header__logo img {
     margin-top: 10px;
     margin-bottom: 10px;
     width: 100px;
 }
 /* 1-2-1. 탑메뉴 */
-.top-menu ul{
+.top-menu ul {
     /* 플렉스박스 */
     display: flex;
     /* 진행방향정렬 */
-    justify-content: flex-end;  
+    justify-content: flex-end;
     padding: 0 10px 10px;
     width: 140px;
 }
 /* 1-2-2 GNB메뉴 */
-.gnb ul{
+.gnb ul {
     /* 플렉스박스 */
     display: flex;
     /* 진행방향정렬 */
@@ -30,7 +26,7 @@
     left: 0;
 }
 /* GNB메뉴 a */
-.gnb ul>li>a{
+.gnb ul > li > a {
     font-size: 0.6rem;
     display: block;
     text-align: center;
@@ -39,19 +35,25 @@
     white-space: nowrap;
 }
 /* GNB 상위 li 오버시 a*/
-.gnb ul>li:hover>a{
+.gnb ul > li:hover > a {
     color: rgb(155, 149, 149);
-}
-.gnb ul>li:nth-child(3)~li:nth-child(-n+6)>a::after{
-    content: '∨';
-    display: inline-block;
-    transform: scale(.5,.3);
-    margin-left: 3px;
-}
-
-.gnb ul>li:first-child:hover>a{
     background-color: black;
 }
+.top-menu ul > li:hover > a {
+    color: rgb(155, 149, 149);
+    background-color: black;
+}
+
+.vv li > a:first-child:hover{
+    
+}
+
+.vv li > a:first-child::after{
+    content: "∨";
+    display: inline-block;
+    transform: scale(0.5, 0.3);
+}
+
 
 /************ 2. 메인영역 ************/
 #container {
@@ -59,18 +61,17 @@
     position: relative;
     width: 100%;
     max-width: 1000px;
-    
     margin: 0px auto;
     padding-top: 57px;
 }
 
-#container>header {
+#container > header {
     position: relative;
     width: 100%;
     height: 222px;
 }
 
-#container>section {
+#container > section {
     /*슬라이드부모*/
     position: relative;
     width: 100%;
@@ -85,7 +86,7 @@
 #slide {
     display: flex;
     /* 플렉스박스!!! */
-    
+
     /*사진을 싸고 있는 슬라이드*/
     position: absolute;
     top: 0;
@@ -101,7 +102,6 @@
     /* 가로크기를 부모박스 크기에 맞춤! */
     /* height 값은 flex박스 자식요소에서
     등분할시 자동 100%임! */
-    
 }
 
 #slide li img {
@@ -110,7 +110,6 @@
     height: 100%;
     object-fit: cover;
     /* 이미지 비율유지 채우기! */
-    
 }
 
 /*이동버튼*/
@@ -120,7 +119,7 @@
     transform: translateY(-50%);
     /*Y축 중앙이동*/
 }
-.abtn img{
+.abtn img {
     width: 10px;
 }
 /*왼쪽버튼*/
@@ -166,39 +165,139 @@
     /*우선적용!*/
 }
 
-#container>aside {
+#container > aside {
     position: relative;
     width: 467px;
     height: 564px;
     float: left;
 }
 
-.cbox{
-    margin-top: 30px;
-}
-.best{
-    text-align: center;
+@media screen and (max-width:800px){
+    /* 분할개수 조정하기 */
+    .indic{
+        display: none;
+    }
 }
 
-.cbox>ul>li>h1{
+
+#w-menu ul > li > h1 {
     font-size: 1.3rem;
 }
-/* GNB메뉴 a */
-.best ul>li>a{
+
+.contents{
+    height: 2000px;
+}
+
+.WBI {
+    max-width: 1000px;
+    
+    /*최상위부모*/
+    position: relative;
+    margin: 0px auto;
+    padding-top: 57px;
+}
+
+.cbox{
+    display: block;
+    clear: both;
+}
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+/* #w-menu */
+#w-menu {
+    position: absolute;
+    display: flex;
     float: left;
+    justify-content: center;
+    text-align: center;
+}
+#w-menu ul > li > a {
+    float: left;
+    display: block;
     text-align: center;
     font-size: 0.6rem;
-    display: block;
-    
     padding: 0px 10px 10px;
     /* 줄바꿈 방지 */
     white-space: nowrap;
 }
-/* GNB 상위 li 오버시 a*/
-.best ul>li:hover>a{
+/* #w-menu 상위 li 오버시 a*/
+#w-menu ul > li:hover > a {
     color: rgb(155, 149, 149);
 }
-.partbox{
-    
+
+
+
+body *{
+    /* outline: 2px dashed #ccc; */
 }
+
+:root{
+    /* 1. 분할개수 */
+    --sp-num: 4;
+    /* .2 보더색 */
+    --bd-color: gray;
+}
+.tit{
+    text-align: center;
+}
+
+.part-box{
+    max-width: 1000px;
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.part-box ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vw 2vw;
+}
+.part-box li{
+    position: relative;
+    flex-basis: calc((100% - 2vw*(var(--sp-num) - 1))/ var(--sp-num));
+}
+.part-box img{
+    width: 100%;
+}
+
+.item-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-color:rgb(0 0 0 / 53%);
+}
+
+/* 1100이하 미디어쿼리 시작 */
+@media screen and (max-width:1100px){
+    /* 분할개수 조정하기 */
+    :root{
+        --sp-num: 3;
+        --bd-color: lime;
+    }
+}
+/* 1100이하 미디어쿼리 종료 */
+/* 700이하 미디어쿼리 시작 */
+@media screen and (max-width:700px){
+    /* 분할개수 조정하기 */
+    :root{
+        --sp-num: 2;
+        --bd-color: lime;
+    }
+}
+/* 700이하 미디어쿼리 종료 */
+/* 500이하 미디어쿼리 시작 */
+@media screen and (max-width:500px){
+    /* 분할개수 조정하기 */
+    :root{
+        --sp-num: 1;
+        --bd-color: lime;
+    }
+}
+/* 500이하 미디어쿼리 종료 */
 /************ 3. 하단영역 ************/

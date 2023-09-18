@@ -23,3 +23,17 @@ body > div > * {
 }
 /************ 4. 메인영역: .group-part ************/
 
+.xans-layout-searchheader #keyword {
+    width: 192px;
+    height: 20px;
+    padding: 0 0 0 9px;
+    border: 0;
+    line-height: 11px;
+    font-size: 11px;
+    color: #7c8389;
+    background: none;
+    border-bottom: 1px solid #000;
+}
+input:not([type="range"]):not([type="color"]):not([type="button"]):not([type="reset"]):not([type="submit"]):not([type="file"]) {
+    writing-mode: horizontal-tb !important;
+}
