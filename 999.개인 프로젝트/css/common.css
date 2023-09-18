@@ -18,6 +18,9 @@
     width: 140px;
 }
 /* 1-2-2 GNB메뉴 */
+.gnb{
+    padding-top: 30px;
+}
 .gnb ul {
     /* 플렉스박스 */
     display: flex;
@@ -44,16 +47,59 @@
     background-color: black;
 }
 
-.vv li > a:first-child:hover{
-    
-}
-
-.vv li > a:first-child::after{
+.vv li > a:first-child:hover:after{
     content: "∨";
     display: inline-block;
     transform: scale(0.5, 0.3);
 }
 
+.smenu{
+    position: absolute;
+    left: 50%;
+    /* x축방향 중앙이동 */
+    transform: translateX(-50%);
+    width: 100px;
+    padding: 3px;
+    border-radius: 5px;
+    background: white;
+
+    /* 처음에 숨기기 */
+    display: none;
+}
+/* 상위메뉴 li에 오버시 서브메뉴 보이기 */
+.vv li:hover .smenu{
+    display: block;
+    
+}
+/* 서브메뉴 가상요소로 삼각형 만들기 */
+.smenu::before{
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 25%;
+    transform: translateX(-180%);
+    width: 20px;
+    height: 15px;
+    background-color: #373737;
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+/* 서브메뉴 ol */
+.smenu ol{
+    border: 1px solid #ccc;
+    color: #ccccccc9;
+    padding: 10px;
+    z-index: 3;
+}
+/* 서브메뉴 a */
+.smenu a{
+    font-size: 1.0rem;
+    line-height: 1.7;
+    
+}
+/* 서브메뉴 li오버시 a */
+.smenu li:hover a{
+    color: orangered;
+}
 
 /************ 2. 메인영역 ************/
 #container {
@@ -120,7 +166,7 @@
     /*Y축 중앙이동*/
 }
 .abtn img {
-    width: 10px;
+    width: 40px;
 }
 /*왼쪽버튼*/
 .ab1 {
@@ -180,9 +226,6 @@
 }
 
 
-#w-menu ul > li > h1 {
-    font-size: 1.3rem;
-}
 
 .contents{
     height: 2000px;
@@ -190,31 +233,59 @@
 
 .WBI {
     max-width: 1000px;
-    
+    width: 100%;
     /*최상위부모*/
     position: relative;
     margin: 0px auto;
-    padding-top: 57px;
+    background: #fff;
+    box-sizing: border-box;
 }
 
 .cbox{
-    display: block;
+    min-width: 130px;
     clear: both;
-}
-.title {
-    display: flex;
-    justify-content: center;
+    position: relative;
+    margin: 0 auto;
 }
 
-/* #w-menu */
-#w-menu {
-    position: absolute;
-    display: flex;
-    float: left;
-    justify-content: center;
-    text-align: center;
+.title{
+    display: inline-block;
+    width: 100px;
+    
 }
-#w-menu ul > li > a {
+.title a{
+    
+    float: left;
+    font-weight: normal;
+    color: #2e2e2e;
+    letter-spacing: 0.5px;
+    padding-bottom: 20px;
+    display: block;
+    text-align: center;
+    font-size: 17px;
+    padding-left: 400px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* w-menu */
+.w-menu {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    margin-left: 15%;
+    white-space: nowrap;
+}
+.w-menu li{
+    display: inline-block;
+    width: 100px;
+    
+}
+.w-menu li > a {
     float: left;
     display: block;
     text-align: center;
@@ -222,9 +293,13 @@
     padding: 0px 10px 10px;
     /* 줄바꿈 방지 */
     white-space: nowrap;
+    margin-top: 80px;
+}
+.w-menu ul > li > h1 {
+    font-size: 1.3rem;
 }
 /* #w-menu 상위 li 오버시 a*/
-#w-menu ul > li:hover > a {
+.w-menu li:hover > a {
     color: rgb(155, 149, 149);
 }
 
@@ -245,10 +320,12 @@ body *{
 }
 
 .part-box{
+    position: absolute;
     max-width: 1000px;
     width: 100%;
     height: 200px;
     margin: 0 auto;
+    margin-top: 30px;
 }
 
 .part-box ul{

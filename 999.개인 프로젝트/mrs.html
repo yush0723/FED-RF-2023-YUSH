@@ -61,10 +61,10 @@
                             <ul></ul>
                         </nav>
 
-
+                    <fieldset>
                         <input id ="keyword" name="keyword" fw-filter fw-label="검색어" fw-msg class="inputTypeText" placeholder onmousedown="SEARCH_BANNER.clickSearchForm(this)" value type="text" style="width: 130px;">
                         <input type="image" src="./images/img_search.png" alt="검색" onclick="SEARCH_BANNER.submitSearchBanner(this); return false;">
-        
+                    </fieldset>
                 
                         <!-- 1-2-2. GNB메뉴 -->
                         <nav class="gnb col-12">
@@ -98,6 +98,25 @@
                             <ul>
                                 <li class="col-4">
                                     <a href="#">OUTER</a>
+                                    <div class="smenu">
+                                        <ol>
+                                            <li>
+                                                <a href="#">코트</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">자켓/점퍼</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">가디건</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">집업</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">조끼</a>
+                                            </li>
+                                        </ol>
+                                    </div>
                                 </li>
                                 <li class="col-4">
                                     <a href="#">EVENT</a>
@@ -107,6 +126,25 @@
                             <ul class="vv">
                                 <li class="col-4">
                                     <a href="#">TOP</a>
+                                    <div class="smenu">
+                                        <ol>
+                                            <li>
+                                                <a href="#">긴팔티</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">맨투맨/후드</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">반팔티</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">니트</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">나시</a>
+                                            </li>
+                                        </ol>
+                                    </div>
                                 </li>
                                 <li class="col-4"></li>
                                 <li class="col-4"></li>
@@ -114,6 +152,16 @@
                             <ul class="vv">
                                 <li class="col-4">
                                     <a href="#">SHIRT</a>
+                                    <div class="smenu">
+                                        <ol>
+                                            <li>
+                                                <a href="#">심플/베이직</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">체크/패턴/데님</a>
+                                            </li>
+                                        </ol>
+                                    </div>
                                 </li>
                                 <li class="col-4"></li>
                                 <li class="col-4"></li>
@@ -121,6 +169,25 @@
                             <ul  class="vv">
                                 <li class="col-4">
                                     <a href="#">PANTS</a>
+                                    <div class="smenu">
+                                        <ol>
+                                            <li>
+                                                <a href="#">슬랙스</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">밴딩팬츠</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">면바지</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">청바지</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">반바지</a>
+                                            </li>
+                                        </ol>
+                                    </div>
                                 </li>
                                 <li class="col-4"></li>
                                 <li class="col-4"></li>
@@ -128,6 +195,16 @@
                             <ul class="vv">
                                 <li class="col-4">
                                     <a href="#">SHOES</a>
+                                    <div class="smenu">
+                                        <ol>
+                                            <li>
+                                                <a href="#">신발</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">가방</a>
+                                            </li>
+                                        </ol>
+                                    </div>
                                 </li>
                                 <li class="col-4"></li>
                                 <li class="col-4"></li>
@@ -135,6 +212,28 @@
                             <ul class="vv">
                                 <li class="col-4">
                                     <a href="#">ACC</a>
+                                    <div class="smenu">
+                                        <ol>
+                                            <li>
+                                                <a href="#">목걸이/반지</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">모자</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">안경/선글라스</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">양말</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">벨트</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">기타</a>
+                                            </li>
+                                        </ol>
+                                    </div>
                                 </li>
                                 <li class="col-4"></li>
                                 <li class="col-4"></li>
@@ -182,29 +281,47 @@
                     </section>
                 </section>
                 <div class="WBI">
-                    <div class="title">
-                        <h1>WEEKLY BEST ITEMS</h1>
-                    </div>
-                    <div class="cbox">
-                        <div id="w-menu">
-                            <ul>
-                                <li>
-                                    <a href="#">PROMOTION</a>
-                                </li>
-                                <li>
-                                    <a href="#">OUTER</a>
-                                </li>
-                                <li>
-                                    <a href="#">TOP</a>
-                                </li>
-                                <li>
-                                    <a href="#">SHIRT</a>
-                                </li>
-                                <li>
-                                    <a href="#">BOTTOM</a>
-                                </li>
-                            </ul>
-                        </div>
+                    <li class="title">
+                        <a>WEEKLY BEST ITEMS</a>
+                    </li>
+                    <div cass="cbox">
+                        <ol class="indic w-menu">
+                            <li class="on">
+                                <a href="#">PROMOTION</a>
+                            </li>
+                            <li>
+                                <a href="#">OUTER</a>
+                            </li>
+                            <li>
+                                <a href="#">TOP</a>
+                            </li>
+                            <li>
+                                <a href="#">SHIRT</a>
+                            </li>
+                            <li>
+                                <a href="#">BOTTOM</a>
+                            </li>
+                        </ol>
+
+
+                        <!-- <ul>
+                            <li>
+                                <a href="#">PROMOTION</a>
+                            </li>
+                            <li>
+                                <a href="#">OUTER</a>
+                            </li>
+                            <li>
+                                <a href="#">TOP</a>
+                            </li>
+                            <li>
+                                <a href="#">SHIRT</a>
+                            </li>
+                            <li>
+                                <a href="#">BOTTOM</a>
+                            </li>
+                        </ul> -->
+                    
                         <section class="part-box"></section>
                     </div>
                 </div>
