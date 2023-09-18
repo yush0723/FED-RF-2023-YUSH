@@ -77,7 +77,7 @@
     position: absolute;
     top: -15px;
     left: 25%;
-    transform: translateX(-180%);
+    transform: translateX(-200%);
     width: 20px;
     height: 15px;
     background-color: #373737;
@@ -301,12 +301,6 @@
 /* #w-menu 상위 li 오버시 a*/
 .w-menu li:hover > a {
     color: rgb(155, 149, 149);
-}
-
-
-
-body *{
-    /* outline: 2px dashed #ccc; */
 }
 
 :root{
