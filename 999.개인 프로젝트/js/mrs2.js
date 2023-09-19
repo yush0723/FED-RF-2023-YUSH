@@ -6,7 +6,8 @@ const qsa = (x) => document.querySelectorAll(x);
 
 // addEvent 함수
 // ele - 요소, evt - 이벤트, fn - 함수
-const addEvt = (ele, evt, fn) => ele.addEventListener(evt, fn);
+const addEvt = 
+(ele, evt, fn) => ele.addEventListener(evt, fn);
 
 // HTML태그 로딩후 loadFn함수 호출! ///
 addEvt(window,"DOMContentLoaded", loadFn);
@@ -60,9 +61,6 @@ const TIME_SLIDE = 400;
 function loadFn() {
     console.log("로딩완료!");
 
-    // 슬라이드 순번 전역변수
-    let snum = 0;
-
     // 1. 대상선정
     // 1-1.이벤트 대상: .abtn
     const abtn = qsa('.abtn');
@@ -79,11 +77,13 @@ function loadFn() {
     // 만드는이유: 블릿변경 등에 현재 슬라이드 순번 필요!
     // 사용자 정의 속성은 반드시 'data-'로시작해야함!(W3C규칙)
     // data-seq 로 순번 속성을 넣을 것임!
+    slide.querySelectorAll('li')
+    .forEach((ele,idx)=>ele.setAttribute('data-seq',idx));
+    // setAttribute(속성명,속성값) -> 속성셋팅 JS내장메서드
 
-    // 2. 이벤트 설정하기
-    abtn.forEach((ele) => {
-        addEvt(ele, "click", goSlide);
-    }); ///////// forEach ///////////
+
+    // 2. 이벤트 설정하기 : 버튼요소들 -> forEach()
+    abtn.forEach(ele=>addEvt(ele,'click',goSlide));
 
     // 3. 함수만들기
     function goSlide(){
