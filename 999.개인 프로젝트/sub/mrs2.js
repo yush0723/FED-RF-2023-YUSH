@@ -240,10 +240,10 @@ function loadFn() {
    
    hcode += '<ul>'
    
-   for(var i=0;i<6;i++){
+   for(var i=0;i<10;i++){
        hcode += `
            <li>
-               <img src="./images/1-${i+1}.PNG" alt="slide">
+               <img src="../images/1-${i+1}.PNG" alt="slide">
                <div class="item-info">
                    <h3>상품명${i+1}</h3>
                    <h4>${i+1}</h4>
