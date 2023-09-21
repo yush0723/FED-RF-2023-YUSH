@@ -166,7 +166,7 @@
     display: block;
     text-align: center;
     font-size: 17px;
-    padding-left: 400px;
+    margin-left: 400px;
     white-space: nowrap;
 }
 
@@ -179,7 +179,7 @@
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
-    margin-left: 15%;
+    margin-left: 25%;
     white-space: nowrap;
 }
 .w-menu li{

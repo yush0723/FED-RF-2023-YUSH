@@ -1,4 +1,4 @@
-// 쇼핑몰 배너 JS - 01.가로방향 배너 슬라이드 //
+// mrs.js2
 
 // DOM 선택함수
 const qs = (x) => document.querySelector(x);
