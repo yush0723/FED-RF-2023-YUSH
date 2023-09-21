@@ -240,16 +240,17 @@ function loadFn() {
    
    hcode += '<ul>'
    
-   for(var i=0;i<10;i++){
-       hcode += `
-           <li>
-               <img src="../images/1-${i+1}.PNG" alt="slide">
-               <div class="item-info">
-                   <h3>상품명${i+1}</h3>
-                   <h4>${i+1}</h4>
-               </div>
-           </li>
-       `;
+   for(var i=2;i<5;i++){
+        hcode += `
+        <li>
+            <a href = "./p0${i+1}.html">
+            <img src="../images/p0${i+1}1.JPG">
+            </a>
+            <div class="item-info">
+                <h4>${i+1}</h4>
+        </div>
+    </li>
+         `;
    }
    hcode += '</ul>';
    
