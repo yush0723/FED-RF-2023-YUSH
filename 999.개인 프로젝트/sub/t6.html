@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="kor">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="mrs" />
+        <title>t6</title>
+        <!-- 메인CSS -->
+        <link rel="stylesheet" href="./p.css" />
+        <script src="./t6.js"></script>
+        <script src="../js/smoothScroll23.js"></script>
+    </head>
+    <body>
+        <!-- 확장형 레이아웃 -->
+        <div class="wrap">
+            <!-- 1. 좌측영역 -->
+            <div class="leftBanner">
+                <header class="header">
+                    <!-- 1-1. 로고 박스 영역 -->
+                    <div>
+                        <!-- 상단로고 -->
+                        <h2 class="header__logo">
+                            <img src="../images/logo.png" alt="logo" />
+                        </h2>
+                    </div>
+                    <!-- 1-2. GNB영역 -->
+                    <div>
+                        <!-- 1-2-1. TOP메뉴 -->
+                        <nav class="top-menu">
+                            <ul>
+                                <li class="col-5">
+                                    <a href="#">LOGIN</a>
+                                </li>
+                                <li class="col-7">
+                                    <a href="#">JOIN US</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="col-3">
+                                    <a href="#">CART</a>
+                                </li>
+                                <li class="col-3">
+                                    <a href="#">WISH</a>
+                                </li>
+                                <li class="col-3">
+                                    <a href="#">ORDER</a>
+                                </li>
+                                <li class="col-3">
+                                    <a href="#">MYPAGE</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="col-5">
+                                    <a href="#">BOOKMARK</a>
+                                </li>
+                                <li class="col-7">
+                                    <a href="#">DELIVERY</a>
+                                </li>
+                            </ul>
+                            <ul></ul>
+                            <ul></ul>
+                        </nav>
+
+                        <fieldset>
+                            <input
+                                id="keyword"
+                                name="keyword"
+                                fw-filter
+                                fw-label="검색어"
+                                fw-msg
+                                class="inputTypeText"
+                                placeholder
+                                onmousedown="SEARCH_BANNER.clickSearchForm(this)"
+                                value
+                                type="text"
+                                style="width: 130px"
+                            />
+                            <input
+                                type="image"
+                                src="../images/img_search.png"
+                                alt="검색"
+                                onclick="SEARCH_BANNER.submitSearchBanner(this); return false;"
+                            />
+                        </fieldset>
+
+                        <!-- 1-2-2. GNB메뉴 -->
+                        <nav class="gnb col-12">
+                            <ul>
+                                <li class="col-4">
+                                    <a href="#">PROMO</a>
+                                </li>
+                                <li class="col-4">
+                                    <a href="#">NOTICE</a>
+                                </li>
+                                <li class="col-4"></li>
+                            </ul>
+                            <ul>
+                                <li class="col-4">
+                                    <a href="#">BEST</a>
+                                </li>
+                                <li class="col-4">
+                                    <a href="#">Q&A</a>
+                                </li>
+                                <li class="col-4"></li>
+                            </ul>
+                            <ul>
+                                <li class="col-4">
+                                    <a href="#">NEW10%</a>
+                                </li>
+                                <li>
+                                    <a href="#">REVIEW</a>
+                                </li>
+                                <li class="col-4"></li>
+                            </ul>
+                            <ul>
+                                <li class="col-4">
+                                    <a href="#">OUTER</a>
+                                    <div class="smenu">
+                                        <ol>
+                                            <li>
+                                                <a href="#">코트</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">자켓/점퍼</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">가디건</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">집업</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">조끼</a>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </li>
+                                <li class="col-4">
+                                    <a href="#">EVENT</a>
+                                </li>
+                                <li class="col-4"></li>
+                            </ul>
+                            <ul class="vv">
+                                <li class="col-4">
+                                    <a href="#">TOP</a>
+                                    <div class="smenu">
+                                        <ol>
+                                            <li>
+                                                <a href="#">긴팔티</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">맨투맨/후드</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">반팔티</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">니트</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">나시</a>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </li>
+                                <li class="col-4"></li>
+                                <li class="col-4"></li>
+                            </ul>
+                            <ul class="vv">
+                                <li class="col-4">
+                                    <a href="#">SHIRT</a>
+                                    <div class="smenu">
+                                        <ol>
+                                            <li>
+                                                <a href="#">심플/베이직</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">체크/패턴/데님</a>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </li>
+                                <li class="col-4"></li>
+                                <li class="col-4"></li>
+                            </ul>
+                            <ul class="vv">
+                                <li class="col-4">
+                                    <a href="#">PANTS</a>
+                                    <div class="smenu">
+                                        <ol>
+                                            <li>
+                                                <a href="#">슬랙스</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">밴딩팬츠</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">면바지</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">청바지</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">반바지</a>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </li>
+                                <li class="col-4"></li>
+                                <li class="col-4"></li>
+                            </ul>
+                            <ul class="vv">
+                                <li class="col-4">
+                                    <a href="#">SHOES</a>
+                                    <div class="smenu">
+                                        <ol>
+                                            <li>
+                                                <a href="#">신발</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">가방</a>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </li>
+                                <li class="col-4"></li>
+                                <li class="col-4"></li>
+                            </ul>
+                            <ul class="vv">
+                                <li class="col-4">
+                                    <a href="#">ACC</a>
+                                    <div class="smenu">
+                                        <ol>
+                                            <li>
+                                                <a href="#">목걸이/반지</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">모자</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">안경/선글라스</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">양말</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">벨트</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">기타</a>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </li>
+                                <li class="col-4"></li>
+                                <li class="col-4"></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+            </div>
+
+            <!-- 2. 메인영역 -->
+            <div class="contents">
+                <section id="container">
+                    <!--슬라이드 배너 영역-->
+                    <div class="c1">
+                        <!--슬라이드-->
+                        <ul id="slide">
+                            <li><img src="../images/t61.JPG" alt="slide" /></li>
+                            <li><img src="../images/t62.JPG" alt="slide" /></li>
+                        </ul>
+                    </div>
+                    <div class="c2">
+                        <ul id="detail">
+                            <li>
+                                <a>
+                                    아이비리그 피그맨투맨
+                                </a>
+                                <a>
+                                    
+
+아이비리그 피그맨투맨
+이번에 소개해드릴 아이템은 오버한 사이즈와 피그먼트 원단으로 캐주얼하면서 힙한 무드를 느낄 수 있는 맨투맨이에요! 워싱 후 가공 작업으로 수축률이 매우 적고 소매와 밑단 탄탄한 시보리로 핏을 이쁘게 잡아줘요! 전면 깔끔한 레터링으로 어떤 팬츠와도 이지하게 매치 가능해 추천드리는 맨투맨이에요!
+                                </a>
+                                
+                                <a>COLOR/SIZE</a>
+                                    <a>
+                                        3COLOR / FREE
+                                    </a>
+                                <a>PRICE</a>
+                                    <a>
+                                        47,500원
+                                    </a>
+                                <a>TYPE01</a>
+                                    <a>-[필수] COLOR선택-</a>
+                                <a>TYPE02</a>
+                                    <a>-[필수] SIZE선택-</a>
+                                
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <div class="WBI">
+                    <li class="title">
+                        <a>REVIEW</a>
+                    </li>
+                        <section class="part-box"></section>
+                    </div>
+                </div>
+            </div>
+            <!-- 3. 우측고정 -->
+            <div id="right_fixed">
+                <footer class="footer"></footer>
+            </div>
+        </div>
+    </body>
+</html>

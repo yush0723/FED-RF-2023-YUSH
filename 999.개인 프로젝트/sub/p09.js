@@ -240,13 +240,13 @@ function loadFn() {
    
    hcode += '<ul>'
    
-   for(var i=1;i<5;i++){
+   for(var i=9;i<13;i++){
        hcode += `
-       <li>
-            <a href = "./p${i+1}.html">
-            <img src="../images/p${i+1}1.JPG">
-            </a>
-        </li>
+           <li>
+               <a href = "./p${i+1}.html">
+               <img src="../images/p${i+1}1.JPG">
+               </a>
+           </li>
        `;
    }
    hcode += '</ul>';

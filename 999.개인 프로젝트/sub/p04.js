@@ -240,15 +240,12 @@ function loadFn() {
    
    hcode += '<ul>'
    
-   for(var i=4;i<7;i++){
+   for(var i=4;i<8;i++){
        hcode += `
            <li>
-               <a href = "./p0${i+1}.html">
-               <img src="../images/p0${i+1}1.JPG">
+               <a href = "./p${i+1}.html">
+               <img src="../images/p${i+1}1.JPG">
                </a>
-               <div class="item-info">
-                   <h4>${i+1}</h4>
-               </div>
            </li>
        `;
    }

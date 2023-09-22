@@ -242,11 +242,11 @@ function loadFn() {
    
    for(var i=1;i<5;i++){
        hcode += `
-       <li>
-            <a href = "./p${i+1}.html">
-            <img src="../images/p${i+1}1.JPG">
-            </a>
-        </li>
+           <li>
+               <a href = "./t${i+1}.html">
+               <img src="../images/t${i+1}1.JPG">
+               </a>
+           </li>
        `;
    }
    hcode += '</ul>';
