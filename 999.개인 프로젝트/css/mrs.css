@@ -35,11 +35,6 @@
     box-sizing: border-box;
 }
 
-.mypart{
-
-}
-
-
 #slide {
     display: flex;
     /* 플렉스박스!!! */
@@ -194,21 +189,19 @@
 }
 .w-menu li > a {
     float: left;
-    display: block;
     text-align: center;
     font-size: 0.6rem;
     padding: 0px 10px 10px;
     /* 줄바꿈 방지 */
     white-space: nowrap;
     margin-top: 80px;
-}
-.w-menu ul > li > h1 {
-    font-size: 1.3rem;
+    color: black;
 }
 /* #w-menu 상위 li 오버시 a*/
 .w-menu li:hover > a {
     color: rgb(155, 149, 149);
 }
+
 
 :root{
     /* 1. 분할개수 */
@@ -227,20 +220,25 @@
     height: 200px;
     margin: 0 auto;
     margin-top: 30px;
+    float: left;
 }
 
 .part-box ul{
     display: flex;
     flex-wrap: wrap;
     gap: 3vw 2vw;
+    box-sizing: border-box;
 }
 .part-box li{
     position: relative;
     flex-basis: calc((100% - 2vw*(var(--sp-num) - 1))/ var(--sp-num));
+
 }
 .part-box img{
     width: 100%;
 }
+
+
 
 .item-info {
     position: absolute;
