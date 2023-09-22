@@ -205,31 +205,31 @@ function loadFn() {
         // 결과적으로 5초후 인터발재실행은 하나만 남는다!
    } //////////// clearAuto 함수 ///////////
 
-   // 1. 변경대상: .partbox
-   var part_box = document.querySelector('.part-box');
+//    // 1. 변경대상: .partbox
+//    var part_box = document.querySelector('.part-box');
    
-   // 2. 입력코드 만들어 넣기
-   var hcode = '';
+//    // 2. 입력코드 만들어 넣기
+//    var hcode = '';
    
-   hcode += '<ul>'
+//    hcode += '<ul>'
    
-   for(var i=0;i<6;i++){
-       hcode += `
-           <li>
-               <img src="./images/1-${i+1}.PNG" alt="slide">
-               <div class="item-info">
-                   <h3>상품명${i+1}</h3>
-                   <h4>${i+1}</h4>
-               </div>
-           </li>
-       `;
-   }
-   hcode += '</ul>';
+//    for(var i=0;i<6;i++){
+//        hcode += `
+//            <li>
+//                <img src="./images/1-${i+1}.PNG" alt="slide">
+//                <div class="item-info">
+//                    <h3>상품명${i+1}</h3>
+//                    <h4>${i+1}</h4>
+//                </div>
+//            </li>
+//        `;
+//    }
+//    hcode += '</ul>';
    
-   part_box.innerHTML = hcode;
+//    part_box.innerHTML = hcode;
 
-const gridBox = document.querySelectorAll(".gridBox");
-gridBox.forEach(ele)
+// const gridBox = document.querySelectorAll(".gridBox");
+// gridBox.forEach(ele)
 
 
 

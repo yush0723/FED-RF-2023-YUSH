@@ -35,6 +35,11 @@
     box-sizing: border-box;
 }
 
+.mypart{
+
+}
+
+
 #slide {
     display: flex;
     /* 플렉스박스!!! */
