@@ -1,6 +1,5 @@
 // Pilot PJ 전체메뉴 컴포넌트
 
-// 컨텍스트 API 불러오기
 import { useContext } from "react";
 import { pCon } from "./PilotContext";
 
@@ -15,7 +14,7 @@ export function TotalMenu() {
     myCon.chgPgName(txt);
     // 전체박스 숨기기
     document.querySelector('.ham').click();
-  }; //////// goPage 메서드 ///////////
+  } //////////// goPage /////////////
 
   // 코드 리턴 //////////////////////
   return (
@@ -48,8 +47,7 @@ export function TotalMenu() {
           </dl>
           <dl>
             <dt>
-              <a href="#" 
-              onClick={()=>goPage('women')}>WOMEN</a>
+              <a href="#">WOMEN</a>
             </dt>
             <dd>
               <a href="#">T-SHIRT</a>
@@ -66,8 +64,7 @@ export function TotalMenu() {
           </dl>
           <dl>
             <dt>
-              <a href="#" 
-              onClick={()=>goPage('style')}>STYLE</a>
+              <a href="#">STYLE</a>
             </dt>
             <dd>
               <a href="#">COLLECTION</a>

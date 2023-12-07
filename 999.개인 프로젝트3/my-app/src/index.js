@@ -9,11 +9,13 @@ const root = ReactDOM.createRoot(document.getElementById('#root'));
 root.render( <App />);
 
 function App(){
+
   return(
+    
     <>
-    <TopArea />
-    <MainArea />
-    <FooterArea />
+      <TopArea />
+      <MainArea />
+      <FooterArea />
     </>
   )
 } ////////////// App 컴포넌트 //////////////////

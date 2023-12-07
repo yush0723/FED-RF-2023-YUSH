@@ -1,5 +1,5 @@
-import "../func/cherry.js"
-import "../css"
+import "../func/cherry.js";
+import "../css/cherry.css"
  return(
     <>
         <h1>벚꽃 날리는 소스</h1>

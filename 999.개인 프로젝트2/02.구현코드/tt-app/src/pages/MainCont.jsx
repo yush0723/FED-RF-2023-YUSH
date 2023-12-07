@@ -18,7 +18,7 @@ export function MainCont() {
   useEffect(() => {
     // 랜더링 후 한번만 적용!
     // console.log("랜더링OK!");
-    
+
     // 스크롤바 없애기
     $('html,body').css({overflow:'hidden'});
 
@@ -28,10 +28,10 @@ export function MainCont() {
     // 리액트 함수에서 JS함수를 호출하는 형태로해야
     // 해제 메서드인 removeEventListener 가 유효함!
 
-    // 자동스크롤 이벤트 설정하기 /////
+    //자동스크롤 호출
     window.addEventListener('wheel',wheelFn);
 
-    // 메뉴+인디케이터 이벤트 기능설정함수 호출 ////
+    // 메뉴+인디케이터 이벤트 기능설정함수 호출 ///
     evtFn();
 
     // 초기화 함수 호출
@@ -43,7 +43,7 @@ export function MainCont() {
     //드래그배너 호출
     dragBanner();
 
-    // 컴포넌트 소멸자 : 이 컴포넌트가 삭제될때 호출됨 //
+    // 컴포넌트 소멸자
     return(()=>{
       console.log('난 소멸했어~!');
 
@@ -52,12 +52,11 @@ export function MainCont() {
 
       // 메인 페이지에만 사용되는 로고클릭시 상단이동 이벤트 해제
       // 제이쿼리로 특정요소에 걸어준경우 해제는 off(이벤트명)
-      $("#logo a").off('click');
-      $(".gnb li").off('click').removeClass('on');
+      $('#logo a').off("click");
+      $('.gnb li').off('click');
       $(document).off('keydown');
 
-
-    });////////// 소멸자 return //////
+    }); //////////// 소멸자 return //////////
   }, []); /////// useEffect ///////////
 
   return (

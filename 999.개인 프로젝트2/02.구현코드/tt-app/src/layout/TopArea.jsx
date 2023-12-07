@@ -19,8 +19,6 @@ export function TopArea(props) {
 
   }; ///////// makeList /////////
 
-
-
   return (
     <>
       <div id="top-area">
