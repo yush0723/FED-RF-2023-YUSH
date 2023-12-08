@@ -104,7 +104,7 @@ let Paging = {
                 
                 <img 
                     v-bind:src="
-                    './images/goods2/'+
+                    './images/goods/'+
                     v.cat +
                     '/'+v.ginfo[0]+'.jpg'  
                     " />
@@ -167,7 +167,7 @@ let More = {
                 
                 <img 
                     v-bind:src="
-                    './images/goods3/'+
+                    './images/goods/'+
                     v.cat +
                     '/'+v.ginfo[0]+'.jpg'  
                     " />
