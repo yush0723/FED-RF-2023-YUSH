@@ -70,8 +70,9 @@
     width: 1000px;
     height: 1000px;
     z-index: 9999; */
-    position:relative
-    width: 100%;
+    position:relative;
+    left: 10%;
+    width: 80%;
     aspect-ratio: 1.78/1;
     /* height: 564px; */
     overflow: hidden;
