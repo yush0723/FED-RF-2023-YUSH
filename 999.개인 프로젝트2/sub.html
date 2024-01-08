@@ -4,6 +4,23 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Tokyo Travel</title>
+        <!-- 스와이퍼 CSS -->
+        <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+        <!-- 메인 CSS -->
+        <link rel="stylesheet" href="./css/glist.css" />
+        <!-- 미디어쿼리 CSS -->
+        <link rel="stylesheet" href="./css/media.css" />
+        
+        <!-- 뷰JS 스탠드얼론 버전 가져오기! -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+        <!-- 뷰JS vuex CDN -->
+        <script src="https://unpkg.com/vuex@3.0.0"></script>
+
+        <!-- 뷰JS 라우터 CDN -->
+        <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
+
+        <!-- 제이쿼리 라이브러리 -->
         <script src="js/jquery-3.6.0.min.js"></script>
         <script src="js/jquery-ui.min.js"></script>
         <!-- 모바일 이벤트 처리 터치펀치 -->
@@ -30,13 +47,39 @@
                 padding: 0;
                 width: 100%;
                 height: 100%;
+                z-index: -1;
             }
             body {
                 height: 3000px;
             }
+            .top {
+                position: relative;
+            }
+            .ibx {
+                width: 1920px;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+            #logo {
+                position: relative;
+                z-index: 10;
+                width: 15%;
+                /* 높이값은 자동 */
+                padding: 3% 0 1% 3%;
+                /* 마진을 줄 경우 부모박스가 마진위,아래 값을 포함하지 않음! */
+            }
 
-            .wrap {
-                position: absolute;
+            #logo img {
+                width: 100%;
+            }
+            .bgm{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .wr {
+                position: relative;
                 top: calc(50% - 852px / 2);
                 left: calc(50% - 852px / 2);
                 /* transform: translate(-50%, -50%); */
@@ -60,8 +103,8 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 250px;
-                height: 250px;
+                width: 200px;
+                height: 200px;
                 border-radius: 50%;
                 /*원*/
                 background: url(images/map1.jpg) no-repeat fixed;
@@ -150,9 +193,9 @@
                 // 박스의 실제위치를 구함
                 // 실제 박스위치에 크기의 절반을 더한 이유는
                 // transform에서 위치이동을 했기때문이다!
-                let bgtop = $(".wrap").offset().top - $(window).scrollTop();
+                let bgtop = $(".wr").offset().top - $(window).scrollTop();
 
-                let bgleft = $(".wrap").offset().left;
+                let bgleft = $(".wr").offset().left;
 
                 // 고정된 배경이미지 위치보정
                 $("#bg").css({
@@ -167,7 +210,20 @@
     </head>
 
     <body>
-        <div class="wrap">
+        <header class="top ibx">
+            <!-- 1-1.로고 -->
+            <h1 id="logo">
+                <a>
+                    <img src="images/main_logo.png" alt="파일럿로고" />
+                </a>
+            </h1>
+        </header>
+        <div class="mbox">
+            <video src="images/disc2018.mp4" class="bgm" muted autoplay loop></video>
+            
+        </div>
+
+        <div class="wr">
             <div id="top">
                 <top-comp></top-comp>
             </div>
