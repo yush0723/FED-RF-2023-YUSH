@@ -31,10 +31,6 @@
         display: none;
     }
 
-    .mbox {
-        background: url(../images/mobile/ban04.jpg) no-repeat center/cover;
-    }
-
     /* 전체메뉴 방향변경 */
     .mlist {
         flex-direction: column;

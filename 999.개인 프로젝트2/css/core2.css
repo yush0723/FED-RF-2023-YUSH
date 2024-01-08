@@ -49,7 +49,3 @@ body {
     /* 10px로 한 이유는 
     em,rem,% 글자 상대단위 계산을 편하게 하기위함*/
 }
-
-body {
-    overflow: hidden;
-}

@@ -27,7 +27,7 @@ const comData = {
     <header class="top ibx">
         <!-- 1-1.로고 -->
         <h1 id="logo">
-            <a>
+            <a href="./glist.html">
                 <img src="images/main_logo.png" alt="파일럿로고" />
             </a>
         </h1>
