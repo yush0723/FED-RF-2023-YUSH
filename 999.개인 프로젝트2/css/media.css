@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* 파일럿 PJ 메인 페이지 미디어쿼리 - media.css */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 500px) {
     /* 1. 스크롤 생김 */
     html,
     body {
@@ -14,12 +14,13 @@
     /* 1.5. 상단부분 */
     #top {
         background-color: rgba(0, 0, 0, 0.5);
+        height: 18vw;
     }
 
     #logo {
         width: 45%;
         margin: 0 auto;
-        padding: 3% 0;
+        padding: 2% 0;
     }
 
     .gnb {
@@ -39,7 +40,7 @@
     /* 배너이미지 모바일용으로 변경하기! */
     /* 각 슬라이드 셋팅 */
     .slide li.ban1 {
-        background: url(../images/mobile/ban01.jpg) no-repeat center/cover;
+        background: url(../images/goods/men/m2.jpg) no-repeat center/cover;
     }
 
     .slide li.ban2 {
