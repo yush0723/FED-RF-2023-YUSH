@@ -64,12 +64,6 @@
 
 /*********** 전체메뉴 ************/
 .mbox{
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    width: 1000px;
-    height: 1000px;
-    z-index: 9999; */
     position:relative;
     left: 10%;
     width: 80%;
@@ -117,16 +111,6 @@
 .mlist a:hover{
     color: aquamarine;
 }
-
-/* 동영상 박스 */
-.bgm{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin-top: 5%;
-}
-
 
 /********** 3.하단영역 ***********/
 #info {
