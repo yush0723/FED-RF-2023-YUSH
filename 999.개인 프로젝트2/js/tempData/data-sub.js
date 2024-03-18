@@ -209,7 +209,7 @@ const subData = {
                                     <span id="gcode">
                                     {{$store.state.gcode}}
                                     </span>
-                                </li>
+                                </li> 
                                 <li>
                                     <span>사이즈</span>
                                     <span>95 100 105 110</span>
